@@ -1,44 +1,6 @@
 <div>
   <app-navbar> </app-navbar>
-  <div id="center">
-    <div class="container-searchbox">
-      <form [formGroup]="searchTweetsForm">
-        <div class="container-searchbox">
-          <input
-            matInput
-            placeholder="Hashtag"
-            value=""
-            name="hashtag"
-            formControlName="hashtag"
-            [ngClass]="setClassTweet()"
-          />
-          <button
-            mat-button
-            (click)="searchTweet()"
-            [disabled]="!searchTweetsForm.valid"
-          >
-            Buscar!
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
 </div>
 <div>
-  <app-loading [condition]="isLoading"></app-loading>
-  <div *ngIf="showData">
-    <mat-card class="card" *ngFor="let item of tweets">
-      <mat-card-header>
-        <mat-card-title>{{ item.tweet }}</mat-card-title>
-        <mat-card-subtitle>Analisis NLU</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <span *ngFor="let elem of item.analysis">
-          <p>{{ elem.type }} : {{ elem.text }}</p>
-        </span>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
   <router-outlet></router-outlet>
 </div>

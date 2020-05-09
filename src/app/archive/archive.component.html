@@ -1,0 +1,24 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<div>
+  <form [formGroup]="archiveForm">
+    <mat-form-field appearance="outline" class="one-width-form">
+      <mat-label>Ingresa el nombre del archivo con extensión</mat-label>
+      <input matInput value="" name="docName" formControlName="docName" />
+    </mat-form-field>
+    <button mat-button (click)="sendName()" [disabled]="!archiveForm.valid">
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</div>
+
+<div *ngIf="isText">
+  <mat-card class="row">
+    <mat-card-header>
+      <mat-card-title>{{ results.text }}</mat-card-title>
+      <mat-card-subtitle *ngFor="let item of data">
+        Entidad: {{ item.type }}, Texto identificado: {{ item.text }}
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>

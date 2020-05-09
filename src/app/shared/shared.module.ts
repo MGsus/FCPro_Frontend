@@ -2,8 +2,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoadingComponent } from './loading/loading.component';
 import { MaterialModule } from '../material-module.module';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   imports: [

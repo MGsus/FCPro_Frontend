@@ -1,0 +1,12 @@
+<app-loading [condition]="isLoading"></app-loading>
+<mat-card *ngFor="let item of tweets" class="row">
+  <mat-card-header>
+    <mat-card-title>{{ item.tweet }}</mat-card-title>
+    <mat-card-subtitle>Analisis NLU</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <span *ngFor="let elem of item.analysis">
+      <p>{{ elem.type }} : {{ elem.text }}</p>
+    </span>
+  </mat-card-content>
+</mat-card>

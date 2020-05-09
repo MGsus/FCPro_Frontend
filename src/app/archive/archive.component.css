@@ -4,12 +4,6 @@
   max-width: 62.5rem;
   width: 100%;
 }
-.center {
-  margin: 0 auto;
-  margin-top: 40px;
-  max-width: 62.5rem;
-  width: 100%;
-}
 
 .title {
   align-items: center;
@@ -26,4 +20,14 @@
 .button-container {
   flex: 1 1 auto;
   align-items: center;
+}
+
+.one-width-form {
+  width: 100%;
+}
+
+.container-searchbox {
+  flex: 1 1 auto;
+  align-items: center;
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif !important;
 }

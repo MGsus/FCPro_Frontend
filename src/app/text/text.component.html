@@ -1,0 +1,22 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<div class="container-form">
+  <form [formGroup]="textForm">
+    <mat-form-field>
+      <mat-label>Ingresa el texto</mat-label>
+      <textarea matInput value="" name="text" formControlName="text"></textarea>
+    </mat-form-field>
+    <button mat-button (click)="sendText()" [disabled]="!textForm.valid">
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</div>
+
+<div *ngIf="isResults">
+  <mat-card *ngFor="let item of results" class="row">
+    <mat-card-header>
+      <mat-card-title>{{ item.text }}</mat-card-title>
+      <mat-card-subtitle>{{ item.type }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
