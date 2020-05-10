@@ -14,7 +14,6 @@ export class ArchiveComponent implements OnInit {
   docName = new FormControl('');
   results: any;
   isLoading: boolean;
-  isText: boolean;
   isData: boolean;
   data: any;
 
@@ -49,10 +48,7 @@ export class ArchiveComponent implements OnInit {
             }
           );
         },
-        (error) => console.error(error),
-        () => {
-          this.isText = true;
-        }
+        (error) => console.error(error)
       );
   }
 }

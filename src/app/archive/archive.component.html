@@ -1,8 +1,6 @@
-<app-loading [condition]="isLoading"></app-loading>
-
-<div>
+<div class="row center">
   <form [formGroup]="archiveForm">
-    <mat-form-field appearance="outline" class="one-width-form">
+    <mat-form-field appearance="outline" style="width: 80%;">
       <mat-label>Ingresa el nombre del archivo con extensión</mat-label>
       <input matInput value="" name="docName" formControlName="docName" />
     </mat-form-field>
@@ -11,9 +9,9 @@
     </button>
   </form>
 </div>
-
-<div *ngIf="isText">
-  <mat-card class="row">
+<app-loading [condition]="isLoading"></app-loading>
+<div *ngIf="isData">
+  <mat-card>
     <mat-card-header>
       <mat-card-title>{{ results.text }}</mat-card-title>
       <mat-card-subtitle *ngFor="let item of data">

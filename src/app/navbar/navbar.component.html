@@ -1,4 +1,4 @@
-<mat-toolbar color="black" class="mat-elevation-z6">
+<mat-toolbar color="primary" class="mat-elevation-z6">
   <a
     mat-button
     aria-hidden="true"
@@ -8,7 +8,6 @@
   >
     <span class="mat-button-wrapper">
       <mat-icon
-        color="primary"
         role="img"
         class="mat-icon notranslate material-icons mat-icon-no-color button-icon"
         >format_color_fill</mat-icon
@@ -27,7 +26,6 @@
         </mat-form-field>
         <button
           mat-button
-          color="primary"
           (click)="searchTweet()"
           [disabled]="!searchTweetsForm.valid"
         >

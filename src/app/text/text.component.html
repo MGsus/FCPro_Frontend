@@ -1,8 +1,6 @@
-<app-loading [condition]="isLoading"></app-loading>
-
-<div class="container-form">
+<div class="row center textForm">
   <form [formGroup]="textForm">
-    <mat-form-field>
+    <mat-form-field style="width: 80%;">
       <mat-label>Ingresa el texto</mat-label>
       <textarea matInput value="" name="text" formControlName="text"></textarea>
     </mat-form-field>
@@ -11,9 +9,9 @@
     </button>
   </form>
 </div>
-
+<app-loading [condition]="isLoading"></app-loading>
 <div *ngIf="isResults">
-  <mat-card *ngFor="let item of results" class="row">
+  <mat-card *ngFor="let item of results">
     <mat-card-header>
       <mat-card-title>{{ item.text }}</mat-card-title>
       <mat-card-subtitle>{{ item.type }}</mat-card-subtitle>

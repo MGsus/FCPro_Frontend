@@ -1,4 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.row {
+  margin: 0 auto;
+  margin-top: 120px;
+  max-width: 62.5rem;
+  width: 100%;
+}
+
+.title {
+  align-items: center;
+  text-align: center;
+  font: 400 35px/50px Roboto, "Helvetica Neue", sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2.5px black;
+}
+.text {
+  margin-top: 40px;
+  font: 100 20px/25px Roboto, "Helvetica Neue", sans-serif;
+}
+.subtitle {
+  align-items: center;
+  text-align: center;
+  font: 400 25px/32px Roboto, "Helvetica Neue", sans-serif;
+  padding: 90px 0 20px;
+  color: white;
+  overflow: hidden;
+  background: #455a64;
+  width: 100%;
+  text-shadow: 1px 1px 2.5px black;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.doc-header {
+  padding: 160px 0 100px;
+  color: white;
+  overflow: hidden;
+  background: #455a64;
+  width: 100%;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.center {
+  text-align: center;
+}
+
+.textForm{
+    max-width: 62.5rem;
+    width: 100%;
+}
+
+.button-container {
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.center-img {
+  padding: 0 17em;
+  filter: invert(1);
+  width: 50%;
+  opacity: 0.85;
+}
+
+.tweet-card {
+  max-width: 30rem;
+  width: 100%;
+}
