@@ -8,6 +8,6 @@ export class TweetService {
   constructor(private http: HttpClient) {}
 
   searchTweets(hashtag: String): Observable<Tweet> {
-    return this.http.get<Tweet>(`184.172.229.135:30836/api/tweets/${hashtag}`);
+    return this.http.get<Tweet>(`http://184.172.229.135:30836/api/tweets/${hashtag}`);
   }
 }

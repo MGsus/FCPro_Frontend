@@ -1,10 +1,20 @@
 <app-loading [condition]="isLoading"></app-loading>
-<div class="row">
+
+<div *ngIf="isTweets" class="subtitle">
+  <p>¡Esto es lo que hemos encontrado!</p>
+</div>
+
+<div class="row-tweet">
+  <p *ngIf="isTweets" class="text" style="margin: 0 7rem 2rem !important;">
+    Por cada tarjeta con un tweet encontrarás el análisis realizado por IBM
+    Watson NLU
+  </p>
   <div *ngFor="let item of tweets">
-    <mat-card class="tweet-card">
+    <mat-card class="tweet-card mat-elevation-z6">
       <mat-card-header>
         <div mat-card-avatar>
           <mat-icon
+            color="accent"
             fontSet="fab"
             fontIcon="fa-twitter"
             style="font-size: 35px;"
@@ -13,24 +23,15 @@
         <mat-card-title>{{ item.tweet }}</mat-card-title>
       </mat-card-header>
     </mat-card>
-    <mat-card>
+    <mat-card
+      class="nlu-card mat-elevation-z6"
+      *ngFor="let elem of item.analysis"
+    >
       <mat-card-header>
         <div mat-card-avatar class="card-watson-image"></div>
-        <span *ngFor="let elem of item.analysis">
-          <mat-card-title> {{ elem.type }}: {{ elem.text }} </mat-card-title>
-        </span>
+        <mat-card-title> {{ elem.text }} </mat-card-title>
+        <mat-card-subtitle>{{ elem.type }}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
 </div>
-<!-- <mat-card *ngFor="let item of tweets" class="row">
-  <mat-card-header>
-    <mat-card-title>{{ item.tweet }}</mat-card-title>
-    <mat-card-subtitle>Analisis NLU</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <span *ngFor="let elem of item.analysis">
-      <p>{{ elem.type }} : {{ elem.text }}</p>
-    </span>
-  </mat-card-content>
-</mat-card> -->

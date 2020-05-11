@@ -12,6 +12,7 @@ import { Tweet } from '../shared/models/tweet.model';
 export class TweetComponent implements OnInit {
   tweets: Tweet;
   isLoading: boolean;
+  isTweets: boolean;
   constructor(
     private router: ActivatedRoute,
     private tweetService: TweetService
@@ -23,7 +24,10 @@ export class TweetComponent implements OnInit {
       this.tweetService.searchTweets(res['hashtag']).subscribe(
         (data) => (this.tweets = data),
         (error) => console.log(error),
-        () => (this.isLoading = false)
+        () => {
+          this.isLoading = false;
+          this.isTweets = true;
+        }
       );
     });
   }
