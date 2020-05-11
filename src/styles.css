@@ -34,7 +34,7 @@ body {
   padding: 90px 0 20px;
   color: white;
   overflow: hidden;
-  background: #455a64;
+  background: #0d47a1;
   width: 100%;
   text-shadow: 1px 1px 2.5px black;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -45,7 +45,10 @@ body {
   padding: 160px 0 100px;
   color: white;
   overflow: hidden;
-  background: #455a64;
+  background: url("https://img.icons8.com/pastel-glyph/280/ffffff/oil-pump-jack.png")
+    #0d47a1;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
   width: 100%;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -63,9 +66,9 @@ body {
   text-align: center;
 }
 
-.textForm{
-    max-width: 62.5rem;
-    width: 100%;
+.textForm {
+  max-width: 62.5rem;
+  width: 100%;
 }
 
 .button-container {
@@ -83,4 +86,21 @@ body {
 .tweet-card {
   max-width: 30rem;
   width: 100%;
+}
+
+.img-container {
+  width: 64px;
+  height: 64px;
+  padding: 0 40px;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 15em;
 }
