@@ -34,6 +34,21 @@ body {
   margin-top: 40px !important;
   font: 200 24px/29px Roboto, "Helvetica Neue", sans-serif !important;
 }
+
+.text-subtitle {
+  align-items: center;
+  text-align: center;
+  font: 400 30px/32px Roboto, "Helvetica Neue", sans-serif;
+  padding: 90px 0 20px;
+  color: white;
+  overflow: hidden;
+  background: #1e88e5;
+  width: 100%;
+  text-shadow: 1px 1px 2.5px black;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
 .subtitle {
   align-items: center;
   text-align: center;
@@ -71,11 +86,6 @@ body {
 
 .center {
   text-align: center;
-}
-
-.textForm {
-  max-width: 62.5rem;
-  width: 100%;
 }
 
 .button-container {
@@ -124,7 +134,7 @@ body {
 .logos {
   display: flex;
   align-items: center;
-  padding: 2em 0 7em 5em;
+  padding: 2em 0 5em;
 }
 
 .fcontainer {
@@ -157,4 +167,9 @@ body {
 .bg {
   background: url("https://img.icons8.com/pastel-glyph/280/000000/oil-pump-jack.png");
   background-repeat: no-repeat;
+}
+
+.card-watson-image {
+  background-image: url("./assets/Watson.png");
+  background-size: cover;
 }
