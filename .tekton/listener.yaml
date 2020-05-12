@@ -22,7 +22,7 @@ spec:
       default: us-south
     - name: clusterNamespace
       description: The Kubernetes cluster namespace
-      default: proyecto
+      default: FCProject
   resourcetemplates:
     - apiVersion: v1
       kind: PersistentVolumeClaim
@@ -73,7 +73,7 @@ metadata:
 spec:
   params:
     - name: repository
-      value: "https://github.com/MGsus/Tekton_Front"
+      value: "https://github.com/emeloibmco/Teckton-Kubernetes-Angular-CRUD"
     - name: revision
       value: "master"
 ---
