@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend-app
-          image: us.icr.io/proyecto/frontend-app
+          image: us.icr.io/clstr/frontend-app
           ports:
             - containerPort: 80
 ---
