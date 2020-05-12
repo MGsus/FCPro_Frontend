@@ -9,7 +9,7 @@ export class TextService {
   sendText(text: any): Observable<any> {
     console.log(text);
 
-    return this.http.post(`http://184.172.229.135:30836/api/upload-text`, {
+    return this.http.post(`http://159.122.181.35:31257/api/upload-text`, {
       text: text,
     });
   }
