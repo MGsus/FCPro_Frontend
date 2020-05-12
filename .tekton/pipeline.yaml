@@ -22,7 +22,7 @@ spec:
       default: us-south
     - name: clusterNamespace
       description: The Kubernetes cluster namespace
-      default: FCProject
+      default: proyecto
   workspaces:
   - name: pipeline-pvc
   tasks:
