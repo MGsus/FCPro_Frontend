@@ -7,14 +7,14 @@ export class ArchiveService {
   constructor(private http: HttpClient) {}
 
   searchArchives(name: any): Observable<any> {
-    return this.http.post<any>(`http://159.122.181.35:31257/file`, {
+    return this.http.post<any>(`http://169.51.203.93:32553/file`, {
       bucket: 'fcproyecto-bucket-stg',
       name: name,
     });
   }
 
   getHistory(): Observable<any> {
-    return this.http.post<any>(`http://159.122.181.35:31257/files`, {
+    return this.http.post<any>(`http://169.51.203.93:32553/files`, {
       bucket: 'fcproyecto-bucket-stg',
     });
   }
